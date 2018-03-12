@@ -1,0 +1,55 @@
+.sonarProfileWrapper {
+    display: block;
+    padding: 10px;
+    background: white;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.sonarIssueElement {
+    display: flex;
+    flex-direction: row;
+    color: #444;
+    margin-left: 10px;
+    background-color: #ffeaea;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.sonarIssueElementLine {
+    display: block;
+    width: 40px;
+    text-align: center;
+    background-color: #ffeaea;
+    float: left;
+}
+
+.sonarIssueElementLink {
+    display: block;
+    color: #444;
+    margin-left: 10px;
+    background-color: #ffeaea;
+    float: left;
+}
+
+.sonar-coverage, .authorizationError {
+    display: flex;
+    flex-direction: row;
+    color: rgb(68, 68, 68);
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.authorizationError {
+    color: red;
+}
+
+.sonar-wrapper {
+    margin-top: -6px;
+}
+
+.toolbar .aui-button {
+    border-width: 2px;
+    line-height: normal;
+}

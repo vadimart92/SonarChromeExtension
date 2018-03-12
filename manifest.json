@@ -1,0 +1,53 @@
+{
+	"manifest_version": 2,
+	"name": "Crucible modifications",
+	"version": "1.5.5",
+	"author": "I.Shupenya and others",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [{
+		"matches": ["*://tscore-review/*","*://tscore-review.tscrm.com/*"],
+		"js": [
+			"lib/jquery-2.1.4.min.js",
+			"lib/jquery-ui.min.js",
+			"lib/underscore-min.js",
+			"CrucibleAddin.js"
+		]
+	},
+    {
+		"matches": ["*://tscore-review/cru/CR*", "*://tscore-review.tscrm.com/cru/CR*"],
+		"js": [
+			"lib/jquery-2.1.4.min.js",
+			"lib/jquery-ui.min.js",
+			"lib/underscore-min.js",
+			"Utils.js",
+			"SonarAddin.js",
+			"CodereviewChecklist.js"
+		],
+		"css": [
+			"lib/jquery-ui.min.css",
+			"SonarAddin.css",
+			"CodereviewChecklist.css"
+		]
+	},
+    {
+		"matches": ["*://tscore-task:*/*"],
+		"js": [
+			"lib/jquery-2.1.4.min.js",
+			"lib/jquery-ui.min.js",
+			"lib/underscore-min.js",
+			"JiraEpicDowngrade.js"
+		],
+		"css": [
+			"lib/jquery-ui.min.css",
+			"JiraEpicDowngrade.css"
+		]
+	}],
+	"options_page": "settings.html",
+	"web_accessible_resources": ["settings.html"],
+	"permissions": [
+        "activeTab", "storage", "*://tscore-review/*", "*://tscore-review.tscrm.com/*", "*://tscore-sonar/*", "*://tscore-task:*/*"
+    ]
+}
